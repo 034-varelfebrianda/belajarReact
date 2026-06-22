@@ -15,14 +15,25 @@ function DaftarSiswa(){
         {id:5, nama:'Christian',nilai: 75}
     ]
     const siswaLulus = siswa.filter((x)=>x.nilai >= 80)
+
+    const siswaGagal = siswa.filter((x)=>x.nilai <80)
     return(
         <>
         <h3>Siswa yang lulus dengan pendapatan nilai diatas 80:</h3>
-        <ul className="daftar">
+        <ul className="daftarLulus">
             {siswaLulus.map((x)=>(
             <li key={x.id}>
                 {x.nama} - {x.nilai}
             </li>
+            ))}
+        </ul>
+
+        <h3>Siswa yang tidak lulus karena tidak mencapai nilai 80:</h3>
+        <ul className='daftarGagal'>
+            {siswaGagal.map((x)=>(
+                <li key={x.id}>
+                    {x.nama} - {x.nilai}
+                </li>
             ))}
         </ul>
         </>
