@@ -5,8 +5,8 @@ import DaftarSiswa from './App.tsx'
 import TombolLikes from './fiturLike.tsx'
 
 createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <DaftarSiswa/>
-        <TombolLikes/>
-    </StrictMode>
-)
+  <StrictMode>
+      <DaftarSiswa/>
+      <TombolLikes/>
+  </StrictMode>
+  )
